@@ -15,10 +15,10 @@ describe("extractCountriesWithFiveCharactersOrFewer", () => {
   it.todo("should handle an empty array of countries");
 
   it.todo(
-    "should handle an array with no countries having five characters or fewer"
+    "should handle an array with no countries having five characters or fewer",
   );
 
   it.todo(
-    "should handle an array with all countries having five characters or fewer"
+    "should handle an array with all countries having five characters or fewer",
   );
 });

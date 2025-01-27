@@ -17,6 +17,6 @@ describe("getEvensOnly", () => {
   it.todo("should handle an array with negative even numbers");
 
   it.todo(
-    "should handle an array with mixed positive and negative even numbers"
+    "should handle an array with mixed positive and negative even numbers",
   );
 });

@@ -5,7 +5,7 @@ const DUPLICATE_LOCALES = ["EN", "EN", "FR", "FR"];
 
 describe("createLocalesSettings", () => {
   it.todo(
-    "should create locales settings with the first locale enabled and the rest disabled"
+    "should create locales settings with the first locale enabled and the rest disabled",
   );
 
   it.todo("should handle an empty array");

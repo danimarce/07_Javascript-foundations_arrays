@@ -1,0 +1,26 @@
+{
+  "name": "07_javascript-foundations_arrays",
+  "version": "1.0.0",
+  "description": "<figure style=\"text-align: center\">\r    <img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png\" alt=\"DOM Tree\" width=\"100\" />\r    <figcaption>JavaScript</figcaption>\r </figure>",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "9.19.0",
+    "eslint": "9.19.0",
+    "eslint-config-prettier": "10.0.1",
+    "eslint-plugin-prettier": "5.2.3",
+    "globals": "15.14.0",
+    "prettier": "3.4.2"
+  },
+  "dependencies": {
+    "vitest": "3.0.4"
+  }
+}
