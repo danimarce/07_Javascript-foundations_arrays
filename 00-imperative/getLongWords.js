@@ -12,7 +12,6 @@
  * @param {string[]} wordsList - The array of words to filter.
  * @returns {string[]} An array containing words with length equal or greater than 5.
  */
-
 export default function wordsList(wordsList) {
   const newWordsList = [];
   const wordsListLength = wordsList.length;
