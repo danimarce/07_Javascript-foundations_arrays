@@ -1,16 +1,65 @@
-const LOCALES = ["EN", "GR", "FR", "IT", "PT"];
-const EMPTY_LOCALES = [];
-const SINGLE_LOCALE = ["EN"];
-const DUPLICATE_LOCALES = ["EN", "EN", "FR", "FR"];
+import { describe, it, expect } from "vitest";
+import createLocalsSettings from "./createLocalesSettings";
 
-describe("createLocalesSettings", () => {
-  it.todo(
-    "should create locales settings with the first locale enabled and the rest disabled",
-  );
+describe("Given method createLocalesSettings", () => {
+  it("When locales array is passed Then should create locales settings with the first locale enabled and the rest disabled", () => {
+    //Arrange
+    const LOCALES = ["EN", "GR", "FR", "IT", "PT"];
+    const expectedOutput = {
+      EN: { id: 0, enabled: true },
+      GR: { id: 1, enabled: false },
+      FR: { id: 2, enabled: false },
+      IT: { id: 3, enabled: false },
+      PT: { id: 4, enabled: false },
+    };
 
-  it.todo("should handle an empty array");
+    //Act
+    const output = createLocalsSettings(LOCALES);
 
-  it.todo("should handle an array with one locale");
+    //Assert
+    expect(output).toEqual(expectedOutput);
+  });
 
-  it.todo("should handle an array with duplicate locales");
+  it("When an empty array is passed Then should return an empty object", () => {
+    //Arrange
+    const EMPTY_LOCALES = [];
+    const expectedOutput = {};
+
+    //Act
+    const output = createLocalsSettings(EMPTY_LOCALES);
+
+    //Assert
+    expect(output).toEqual(expectedOutput);
+  });
+
+  it("When an array with one locale is passed Then it should be handled", () => {
+    //Arrange
+    const SINGLE_LOCALE = ["EN"];
+    const expectedOutput = {
+      EN: { id: 0, enabled: true },
+    };
+
+    //Act
+    const output = createLocalsSettings(SINGLE_LOCALE);
+
+    //Assert
+    expect(output).toEqual(expectedOutput);
+  });
+
+  it("When an array with duplicated locales is passed Then it should be handled", () => {
+    //Arrange
+    const DUPLICATE_LOCALES = ["EN", "EN", "FR", "FR"];
+    const expectedOutput = {
+      EN: { id: 0, enabled: true },
+      EN: { id: 1, enabled: false },
+      FR: { id: 2, enabled: false },
+      FR: { id: 3, enabled: false },
+    };
+
+    //Act
+    const output = createLocalsSettings(DUPLICATE_LOCALES);
+
+    //Assert
+    expect(output).toEqual(expectedOutput);
+  });
 });
