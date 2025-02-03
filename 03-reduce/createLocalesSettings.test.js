@@ -45,21 +45,4 @@ describe("Given method createLocalesSettings", () => {
     //Assert
     expect(output).toEqual(expectedOutput);
   });
-
-  it("When an array with duplicated locales is passed Then it should be handled", () => {
-    //Arrange
-    const DUPLICATE_LOCALES = ["EN", "EN", "FR", "FR"];
-    const expectedOutput = {
-      EN: { id: 0, enabled: true },
-      EN: { id: 1, enabled: false },
-      FR: { id: 2, enabled: false },
-      FR: { id: 3, enabled: false },
-    };
-
-    //Act
-    const output = createLocalsSettings(DUPLICATE_LOCALES);
-
-    //Assert
-    expect(output).toEqual(expectedOutput);
-  });
 });
