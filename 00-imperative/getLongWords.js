@@ -12,7 +12,7 @@
  * @param {string[]} wordsList - The array of words to filter.
  * @returns {string[]} An array containing words with length equal or greater than 5.
  */
-export default function wordsList(wordsList) {
+export default function getLongWords(wordsList) {
   const newWordsList = [];
   const wordsListLength = wordsList.length;
   const limit = 5;

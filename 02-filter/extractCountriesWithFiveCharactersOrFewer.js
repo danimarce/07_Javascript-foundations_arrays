@@ -16,9 +16,9 @@
 export default function extractCountriesWithFiveCharactersOrFewer(
   countriesList,
 ) {
-  const filtredCountries = countriesList.filter((countrie) => {
+  const filteredCountries = countriesList.filter((countrie) => {
     return countrie.length <= 5;
   });
 
-  return filtredCountries;
+  return filteredCountries;
 }

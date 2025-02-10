@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import createLocalsSettings from "./createLocalesSettings";
+import createLocalesSettings from "./createLocalesSettings";
 
 describe("Given method createLocalesSettings", () => {
   it("When locales array is passed Then should create locales settings with the first locale enabled and the rest disabled", () => {
@@ -14,7 +14,7 @@ describe("Given method createLocalesSettings", () => {
     };
 
     //Act
-    const output = createLocalsSettings(LOCALES);
+    const output = createLocalesSettings(LOCALES);
 
     //Assert
     expect(output).toEqual(expectedOutput);
@@ -26,7 +26,7 @@ describe("Given method createLocalesSettings", () => {
     const expectedOutput = {};
 
     //Act
-    const output = createLocalsSettings(EMPTY_LOCALES);
+    const output = createLocalesSettings(EMPTY_LOCALES);
 
     //Assert
     expect(output).toEqual(expectedOutput);
@@ -40,7 +40,7 @@ describe("Given method createLocalesSettings", () => {
     };
 
     //Act
-    const output = createLocalsSettings(SINGLE_LOCALE);
+    const output = createLocalesSettings(SINGLE_LOCALE);
 
     //Assert
     expect(output).toEqual(expectedOutput);
