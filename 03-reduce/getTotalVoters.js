@@ -27,4 +27,16 @@
  * @returns {number} The total number of voters who have voted.
  */
 
-export default getTotalVoters;
+export default function getTotalVoters(votersList) {
+  const initialVotersValue = 0;
+
+  const totalVoters = votersList.reduce((totalVoters, voter) => {
+    if (voter.hasVoted) {
+      return totalVoters + 1;
+    }
+
+    return totalVoters;
+  }, initialVotersValue);
+
+  return totalVoters;
+}
